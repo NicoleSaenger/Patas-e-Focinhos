@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas e Focinhos</title>
+
+    <!-- Ícone da Página -->
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
+    <!-- Importando fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- JS do Bootstrap e Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     <!-- Importando meu arquivo CSS -->
+     <link rel="stylesheet" href="styles.css">
+
+     <!-- Importando meus scripts arquivo JS -->
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <!--------------------------- Header--------------------------->
+    <header>
+        <!---- -Barra de Navegação ----->
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                <!-----Logo clicável que traz de volta a home page----->
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" alt="Logo" width="130" height="120" class="d-inline-block align-text-top" id="logo">
+                </a>
+
+                <!-----Barra de pesquisa----->
+                <form class="d-flex flex-grow-1" role="search">
+                    <input class="form-control me-2 inputbuscar-custom" type="search" placeholder="O que o seu pet precisa?" aria-label="Buscar">
+                    <button class="btn botaobuscar-custom" type="submit">Buscar</button>
+                </form>
+                <!-----Botão de Entrar / Cadastrar-se----->
+                <button id="EntrarCadastrar" type="button" class="btn botaoEntrar-custom">Entrar / Cadastrar-se</button>
+
+                <!-----Botão Carrinho----->
+                <button class="botaoCarrinho-custom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill= #fff6e4 class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+<!--------------------------- Section 1 - Página Login --------------------------->
+        <section id="login-section" class="d-flex">
+
+            <!-----Imagem lateral----->
+            <div class="image-container">
+                <img src="img/imgLateral.png" alt="Imagem de fundo" class="img-fluid">
+            </div>
+            <div class="login-container">
+
+                <!-----Formulário de login----->
+                <form class="login-form" action="https://formsubmit.co/nic.saenger@gmail.com" method="POST">
+                    <h2>Bem Vindo(a)!</h2>
+                    <!-----Input de e-mail----->
+                    <div class="form-group">
+                        <label class="escritosLogin" for="email">Seu e-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="mail@mail.com" required>
+                    </div>
+                    <!-----Input de senha----->
+                    <div class="form-group">
+                        <label class="escritosLogin" for="password">Sua senha</label>
+                        <input type="password" class="form-control" id="password" placeholder="xxxxxxxx" required>
+                    </div>
+                    <!-----Checkbox manter-me logado----->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">Manter-me logado</label>
+                    </div>
+
+                    <!-----Botão Logar----->
+                    <button type="submit" class="btn btn-primary btn-login" id="botaoLogar">Logar</button>
+                    <!-----Botão para se cadastrar----->
+                    <p id="cadastre-se" class="semconta">Ainda não tem conta? <a href="#" class="cadastre-se">Cadastre-se</a></p>
+                </form>
+            </div>
+        </section>
+
+
+<!--------------------------- Section 2 - Página Cadastro --------------------------->
+
+<!--------------------------- Cadastro Usuário --------------------------->
+        <section id="cadastro-section" class="d-none">
+            <div class="cadastro-usuario-container">
+                <form class="cadastro-form" action="https://formsubmit.co/nic.saenger@gmail.com" method="POST">
+                    <h2>Cadastre-se</h2>
+                    <!-----Input de nome----->
+                    <div class="form-group">
+                        <label class="escritosCadastro" for="nome">Nome completo</label>
+                        <input type="text" class="form-control" id="nomeCom" placeholder="Nome e sobrenome" required>
+                    </div>
+                    <!-----Input de e-mail----->
+                    <div class="form-group">
+                        <label class="escritosCadastro" for="email">Seu e-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="mail@mail.com" required>
+                    </div>
+                    <!-----Input de número contato----->
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="telefone">Telefone</label>
+                            <input type="number" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <!-----Input de endereço----->
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="Rua e número">
+                        </div>
+                    <!-----Input de bairro----->
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="bairro">Bairro</label>
+                            <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                        </div>
+                        <!-----Input de cidade----->
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                        </div>
+                    </div>
+                    <!-----Seleção de estados disponíveis----->
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="estado">Estado</label>
+                            <select class="estado" id="estado" nome="estado">
+                                <option value="">Selecione um estado</option>
+                                <option value="RS">Rio Grande so Sul</option>
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catarina</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-----Input de senha----->
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="password">Crie uma senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                        </div>
+                        <!-----Input de senha----->
+                        <div class="form-group">
+                            <label class="escritosCadastro" for="password2">Repita a senha</label>
+                            <input type="password" class="form-control" id="password2" placeholder="********" required>
+                        </div>
+                    </div>
+                    <!-----Checkbox manter-me logado----->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">Manter-me logado</label>
+                    </div>
+                </form>
+            </div>
+
+             <!-- Separador -->
+            <div class="separador"></div>
+
+<!--------------------------- Cadastro Pet --------------------------->
+
+            <div class="cadastro-pet-container">
+                <form class="cadastro-form" action="https://formsubmit.co/nic.saenger@gmail.com" method="POST">
+                    <h2>Cadastre seu Pet!</h2>
+                    <!-----Input de nome----->
+                    <div class="form-group">
+                        <label class="escritosCadastro" for="nome">Nome</label>
+                        <input type="nome" class="form-control" id="nome" placeholder="Insira o nome ou apelido do seu pet" required>
+                    </div>
+                    <!-----Seleção tipo de pet----->
+                    <div class="form-group">
+                        <label class="escritosCadastro">Tipo do seu pet</label>
+                        <div class="radio-group">
+                            <label for="cachorro">
+                                <input type="radio" id="cachorro" name="tipoPet" value="Cachorro" required>
+                                Cachorro
+                            </label>
+                            <label for="gato">
+                                <input type="radio" id="gato" name="tipoPet" value="Gato" required>
+                                Gato
+                            </label>
+                        </div>
+                    </div>
+                    <!-----Input de raça----->
+                    <div class="form-group">
+                        <label class="escritosCadastro" for="raca">Raça</label>
+                        <input type="text" class="form-control" id="raca" placeholder="xxxxxxxx">
+                    </div>
+                    <!-----Seleção de temperamento----->
+                    <div class="form-group">
+                        <label class="escritosCadastro" for="temperamento">Temperamento</label>
+                        <div class="temperamento-range">
+                            <span>Calmo</span>
+                            <input type="range" class="form-control" id="temperamento" name="temperamento" min="1" max="5" value="3">
+                            <span>Raivoso</span>
+                        </div>
+                    </div>
+            
+                    <!-----Botão de finalização de cadastro----->
+                    <button type="submit" class="btn btn-primary btn-cadastro" id="botaoFinalizaCadastro">Finaizar Cadastro</button>
+                    <!-----Botão para voltar a tela de login----->
+                    <p class="voltarLogin">Voltar a tela de <a href="#" class="voltarLogin" id="voltarLogin">Login</a></p>
+                </form>
+            </div>
+        </section>
+
+<!--------------------------- Section 3 - Home-page --------------------------->
+
+<section id="produtos-servicos-section" class="d-none">
+    <!-- Botão de Agendamento -->
+    <button id="btn-agendamento">Agendar Serviço</button>
+    <h2 id="tituloHome">Produtos e Serviços</h2>
+
+    <!--------------------------- Carrossel Ração --------------------------->
+    <div class="container d-flex justify-content-center align-items-center">
+        
+        <div id="carrosselRacao" class="carousel slide mx-3" data-ride="carousel" data-interval="3000">
+            <h3>Rações</h3>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/CarrosselRação/racaoCachorroAdulto.png" class="d-block w-100" alt="Ração 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselRação/racaoCachorroSenior.png" class="d-block w-100" alt="Ração 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselRação/racaoFilhoteGato.png" class="d-block w-100" alt="Ração 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselRação/racaoGatoAdulto.png" class="d-block w-100" alt="Ração 4">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carrosselRacao" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carrosselRacao" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <!--------------------------- Carrossel Sachê --------------------------->
+        <div id="carrosselSachê" class="carousel slide mx-3" data-ride="carousel" data-interval="3000">
+            <h3>Sachês</h3>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/CarrosselSachê/caixaSache.png" class="d-block w-100" alt="Sachê 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselSachê/lataPateGato.png" class="d-block w-100" alt="Sachê 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselSachê/sacheCachorro.png" class="d-block w-100" alt="Sachê 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carrosselSachê" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carrosselSachê" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <!--------------------------- Carrossel Banho --------------------------->
+        <div id="carrosselBanho" class="carousel slide mx-3" data-ride="carousel" data-interval="3000">
+            <h3>Banho</h3>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/CarrosselBanho/banhoCachorroGrande.png" class="d-block w-100" alt="Banho 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselBanho/banhoCachorroPequeno.png" class="d-block w-100" alt="Banho 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselBanho/banhoGato.png" class="d-block w-100" alt="Banho 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carrosselBanho" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carrosselBanho" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <!--------------------------- Carrossel Tosa --------------------------->
+        <div id="carrosselTosa" class="carousel slide mx-3" data-ride="carousel" data-interval="3000">
+            <h3>Tosa</h3>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/CarrosselTosa/tosaGrande.png" class="d-block w-100" alt="Tosa 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/CarrosselTosa/tosaPequeno.png" class="d-block w-100" alt="Tosa 2">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carrosselTosa" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carrosselTosa" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--------------------------- Section 4 - Agendamento dos Serviços --------------------------->
+
+<section id="agendamento-section" class="d-none d-flex">
+
+    <div class="agendamento-container">
+        <form class="agendamento-form" action="https://formsubmit.co/nic.saenger@gmail.com" method="POST">
+            <h2>Agende seu Serviço!</h2>
+
+            <!-- Selecionar Data -->
+            <div class="form-group">
+                <label class="escritosCadastro" for="data">Selecione a Data</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+            </div>
+
+            <!-- Escolher Serviço -->
+            <div class="form-group">
+                <label class="escritosCadastro" for="servico">Escolha o Serviço</label>
+                <select class="form-control" id="servico" name="servico" required>
+                    <option value="">Selecione um serviço</option>
+                    <option value="banho">Banho Cão Grande Porte</option>
+                    <option value="banho">Banho Cão Pequeno Porte</option>
+                    <option value="banho">Banho Gato</option>
+                    <option value="tosa">Tosa Cão Grande Porte</option>
+                    <option value="tosa">Tosa Cão Pequeno Porte</option>
+                </select>
+            </div>
+
+            <!-- Escolher Pet pré-cadastrado-->
+            <div class="form-group">
+                <label class="escritosCadastro" for="pet">Escolha o Pet</label>
+                <select class="form-control" id="pet" name="pet">
+                    <option value="">Selecione um pet pré-cadastrado</option>
+                </select>
+            </div>
+
+            <!-- Selecionar Tele-busca -->
+            <div class="form-group">
+                <label class="escritosCadastro" for="telebusca">Deseja Tele-busca?</label>
+                <div class="radio-group">
+                    <label for="sim">
+                        <input type="radio" id="sim" name="telebusca" value="sim" required> Sim
+                    </label>
+                    <label for="nao">
+                        <input type="radio" id="nao" name="telebusca" value="nao" required> Não
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botão para fianlizar agendamento -->
+            <button id="btn-agendar" type="submit" class="btn btn-primary btn-agendar">Finalizar Agendamento</button>
+        </form>
+    </div>
+
+    <!-----Imagem lateral----->
+    <div id="imagem-agendamento">
+        <img src="img/imgAgendamento.png" alt="Imagem de fundo" class="img-fluid posicionar-imagem">
+    </div>
+
+</section>
+
+
+<!--------------------------- Footer--------------------------->
+        <!-----Horário de funcionamento----->
+        <footer class="footer">
+            <div class="footer-column">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda à Sexta: 8h - 18h</p>
+                <p>Sábado: 10h - 14h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <!-----Endereço----->
+            <div class="footer-column">
+                <h3>Endereço</h3>
+                <p>Rua da Felicidade, 111</p>
+                <p>Felpudos</p>
+                <p>Novo Petisco - RS</p>
+            </div>
+            <!-----Contato----->
+            <div class="footer-column">
+                <h3>Entre em Contato</h3>
+                <p>Email: patasefucinhos@ptf.com.br</p>
+                <p>Telefone: (51) 3535-333</p>
+                <p>WhatsApp: (51) 91234-4321</p>
+            </div>
+            <!-----Formas de Pagamento----->
+            <div class="footer-column">
+                <h3>Formas de Pagamento</h3>
+                <div>
+                    <img src="img/cartoes.png" alt="Cartões" class="img-cartoes">
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
